@@ -43,7 +43,7 @@ router.post('/api/shorten', async (req, res) => {
 
     //Check if URL already exists
     if (url) {
-      return res.send({ success: true, resource: url.shortUrl})
+      return res.send({ success: true, resource: ('https://toxicaven.dev/' + url.shortUrl)})
     } else
 
     //Make a url code
