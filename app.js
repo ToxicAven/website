@@ -9,9 +9,8 @@ var app = express();
 var indexRouter = require('./routes/index');
 var yesRouter = require('./routes/yes')
 var apiRouter = require('./routes/api')
-var catgirlRouter = require('./routes/apiEndpoints/catgirl');
 var uwuRouter = require('./routes/apiEndpoints/uwu')
-var capesRouter = require('./routes/apiEndpoints/toastCapes')
+var urlRouter = require('./routes/apiEndpoints/url')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('serve-favicon')('./public/images/favicon.ico'));
 
 app.use('/', indexRouter);
+app.use('/', urlRouter);
 //app.use('/catgirl', catgirlRouter);
 app.use('/api/uwu', uwuRouter);
 app.use('/yes', yesRouter);
