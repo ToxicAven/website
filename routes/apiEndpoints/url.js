@@ -56,7 +56,7 @@ router.post('/api/shorten', async (req, res) => {
       chk = require('./urls.json').urls.find( ({ shortUrl }) => shortUrl === urlCode );
     }
 
-    const returnUrl = 'localhost:3000/' + urlCode;
+    const returnUrl = 'https://toxicaven.dev/' + urlCode;
 
     require('./urls.json').urls.push({
       longUrl: input,
