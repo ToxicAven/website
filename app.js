@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('serve-favicon')('./public/images/favicon.ico'));
 
 app.use('/', indexRouter);
-app.use('/s', urlRouter);
+app.use('/', urlRouter);
 //app.use('/catgirl', catgirlRouter);
 app.use('/api/uwu', uwuRouter);
 app.use('/yes', yesRouter);
