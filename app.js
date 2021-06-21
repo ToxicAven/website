@@ -25,22 +25,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('serve-favicon')('./public/images/favicon.ico'));
 
 app.use('/', indexRouter);
-app.use('/', urlRouter);
 //app.use('/catgirl', catgirlRouter);
 app.use('/api/uwu', uwuRouter);
 app.use('/yes', yesRouter);
 app.use('/clients', clientsRouter);
 app.use('/api', apiRouter);
+app.use('/', urlRouter);
 //app.use('/api/capes', capesRouter);
 
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

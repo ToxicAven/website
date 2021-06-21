@@ -11,7 +11,7 @@ const auth = process.env.AUTH
 router.get('/:urlCode', async (req, res) => {
   try {
     console.log(req.params.urlCode)
-    const url = require('./urls.json').urls.find( ({ shortUrl }) => shortUrl === req.params.urlCode );
+    const url = require('./urls.json').urls.find(({ shortUrl }) => shortUrl === req.params.urlCode);
 
     if (!url) {
       return res.status(400).json('Invalid short URL');
@@ -39,21 +39,21 @@ router.post('/api/shorten', async (req, res) => {
   }
 
   try {
-    let url = require('./urls.json').urls.find( ({ longUrl }) => longUrl === input );
+    let url = require('./urls.json').urls.find(({ longUrl }) => longUrl === input);
 
     //Check if URL already exists
     if (url) {
-      return res.send({ success: true, resource: ('https://toxicaven.dev/' + url.shortUrl)})
+      return res.send({ success: true, resource: ('https://toxicaven.dev/' + url.shortUrl) })
     } else
 
-    //Make a url code
-    var urlCode = [...randomBytes(15)].map(byte => zeroWidthChars[Number(byte) % zeroWidthChars.length]).join('').slice(1) + zeroWidthChars[0];
+      //Make a url code
+      var urlCode = [...randomBytes(15)].map(byte => zeroWidthChars[Number(byte) % zeroWidthChars.length]).join('').slice(1) + zeroWidthChars[0];
 
-    let chk = require('./urls.json').urls.find( ({ shortUrl }) => shortUrl === urlCode );
+    let chk = require('./urls.json').urls.find(({ shortUrl }) => shortUrl === urlCode);
 
     while (chk) {
       urlCode = [...randomBytes(15)].map(byte => zeroWidthChars[Number(byte) % zeroWidthChars.length]).join('').slice(1) + zeroWidthChars[0];
-      chk = require('./urls.json').urls.find( ({ shortUrl }) => shortUrl === urlCode );
+      chk = require('./urls.json').urls.find(({ shortUrl }) => shortUrl === urlCode);
     }
 
     const returnUrl = 'https://toxicaven.dev/' + urlCode;
@@ -64,7 +64,7 @@ router.post('/api/shorten', async (req, res) => {
     });
 
     await fs.writeJson(path.join(__dirname, 'urls.json'), require('./urls.json'), { spaces: '\t' })
-    return res.send({ success: true, resource: returnUrl})
+    return res.send({ success: true, resource: returnUrl })
 
   } catch (err) {
     console.error(err);
