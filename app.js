@@ -8,6 +8,7 @@ var app = express();
 
 var indexRouter = require('./routes/index');
 var yesRouter = require('./routes/yes')
+var clientsRouter = require('./routes/clients')
 var apiRouter = require('./routes/api')
 var uwuRouter = require('./routes/apiEndpoints/uwu')
 var urlRouter = require('./routes/apiEndpoints/url')
@@ -28,6 +29,7 @@ app.use('/', urlRouter);
 //app.use('/catgirl', catgirlRouter);
 app.use('/api/uwu', uwuRouter);
 app.use('/yes', yesRouter);
+app.use('/clients', clientsRouter);
 app.use('/api', apiRouter);
 //app.use('/api/capes', capesRouter);
 
