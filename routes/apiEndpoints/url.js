@@ -14,7 +14,7 @@ router.get('/:urlCode', async (req, res) => {
     const url = require('./urls.json').urls.find(({ shortUrl }) => shortUrl === req.params.urlCode);
 
     if (!url) {
-      return res.status(400).json('Invalid short URL');
+      return res.redirect('https://toxicaven.dev');
     }
 
     return res.redirect(url.longUrl);
