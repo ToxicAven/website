@@ -2,6 +2,13 @@ head
     title Yes.
     meta(name='description' content='Yes.')
     meta(property='og:title' content='Yes.')
+    script(src='https://cdn.jsdelivr.net/npm/darkreader@4/darkreader.min.js')
+    script.
+      DarkReader.enable({
+       brightness: 100,
+        contrast: 100,
+        sepia: 5
+      });
     link(rel='icon', href='/images/favicon.ico', type='image/x-icon')
 style(type='text/css').
   h1 {text-align: center; font-size: 160px; font-family: Helvetica, Verdana, Arial;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);}
