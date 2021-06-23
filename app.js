@@ -11,6 +11,7 @@ var yesRouter = require('./routes/yes')
 var clientsRouter = require('./routes/clients')
 var apiRouter = require('./routes/api')
 var trollRouter = require('./routes/trollcrazy')
+var karbiRouter = require('./routes/kubi')
 var sourceRouter = require('./routes/source')
 var uwuRouter = require('./routes/apiEndpoints/uwu')
 var urlRouter = require('./routes/apiEndpoints/url')
@@ -28,6 +29,7 @@ app.use('/', indexRouter);
 //app.use('/catgirl', catgirlRouter);
 app.use('/api/uwu', uwuRouter);
 app.use('/yes', yesRouter);
+app.use('/kirbo', karbiRouter);
 app.use('/clients', clientsRouter);
 app.use('/api', apiRouter);
 app.use('/trollcrazy', trollRouter);
