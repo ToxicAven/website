@@ -10,9 +10,9 @@ var indexRouter = require('./routes/index');
 var yesRouter = require('./routes/yes')
 var clientsRouter = require('./routes/clients')
 var apiRouter = require('./routes/api')
+var trollRouter = require('./routes/trollcrazy')
 var uwuRouter = require('./routes/apiEndpoints/uwu')
 var urlRouter = require('./routes/apiEndpoints/url')
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -30,6 +30,7 @@ app.use('/api/uwu', uwuRouter);
 app.use('/yes', yesRouter);
 app.use('/clients', clientsRouter);
 app.use('/api', apiRouter);
+app.use('/trollcrazy', trollRouter);
 app.use('/', urlRouter);
 //app.use('/api/capes', capesRouter);
 
