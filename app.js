@@ -11,6 +11,7 @@ var yesRouter = require('./routes/yes')
 var clientsRouter = require('./routes/clients')
 var apiRouter = require('./routes/api')
 var trollRouter = require('./routes/trollcrazy')
+var sourceRouter = require('./routes/source')
 var uwuRouter = require('./routes/apiEndpoints/uwu')
 var urlRouter = require('./routes/apiEndpoints/url')
 // view engine setup
@@ -30,6 +31,7 @@ app.use('/yes', yesRouter);
 app.use('/clients', clientsRouter);
 app.use('/api', apiRouter);
 app.use('/trollcrazy', trollRouter);
+app.use('/source', sourceRouter);
 app.use('/', urlRouter);
 //app.use('/api/capes', capesRouter);
 
