@@ -4,6 +4,13 @@ head
     link(rel='icon', href='/images/favicon.ico', type='image/x-icon')
 meta(name='viewport' content='width=device-width, initial-scale=1')
 meta(name='description', content='Hai, I\'m Jacob!')
+script(src='https://cdn.jsdelivr.net/npm/darkreader@4/darkreader.min.js')
+script.
+  DarkReader.enable({
+    brightness: 100,
+    contrast: 100,
+    sepia: 5
+  });
 link(rel='stylesheet' href='/stylesheets/github-markdown.css')
 style.
   .markdown-body {
