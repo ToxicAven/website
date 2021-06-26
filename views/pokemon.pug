@@ -1,0 +1,28 @@
+doctype html
+head
+  title Pokétwo Catch Solver
+  link(rel='icon', href='/images/favicon.ico', type='image/x-icon')
+  meta(property='og:title' content='Poketwo Solver')
+  script(src='https://code.jquery.com/jquery-1.12.4.min.js')
+  script(src='./files/wordlist.js')
+  script(src='https://cdn.jsdelivr.net/npm/darkreader@4/darkreader.min.js')
+  script.
+    DarkReader.enable({
+      brightness: 100,
+      contrast: 100,
+      sepia: 5
+    });
+style.
+  body {
+  text-align: center;
+  font-family: verdana;
+  font-size: 20px;
+  }
+
+h2 Pokétwo Catch Solver
+p Simply enter the hint in the textbox, using underscores as placeholders.
+p The way Pokétwo provides it is the intended format.
+form
+  input#input(name='input' placeholder='Enter Hint' type='text')
+#result
+script(type='text/javascript' src='./javascript/pokemon.js')
