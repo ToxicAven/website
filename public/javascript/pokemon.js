@@ -4,7 +4,6 @@ $(document).ready(function () {
   $("[name='input']").keyup(function () {
     var words = $(this).val().replace(/_/g, ".");
 
-    console.log(words);
     try {
       var searchWord = words.toLowerCase();
 
@@ -28,24 +27,4 @@ $(document).ready(function () {
       // regular expression error
     }
   });
-});
-
-// Help Modal
-var helpModal = document.getElementById("help-modal");
-var helpBtn = document.getElementById("help-btn");
-var helpCloseBtn = document.getElementById("help-modal-close");
-
-helpBtn.addEventListener("click", function () {
-  helpModal.style.display = "block";
-});
-helpCloseBtn.addEventListener("click", function () {
-  helpModal.style.display = "none";
-});
-
-// Character Count
-var count = document.getElementById("count");
-var input = document.getElementById("input");
-
-input.addEventListener("input", function (e) {
-  count.innerHTML = e.target.value.length;
 });
