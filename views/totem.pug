@@ -63,7 +63,7 @@ script.
           .then((res) => res.json())
           .then((json) => {
             if (!json.success) throw Error('Failed to generate');
-            else window.open(`/totem/download/${json.message}`).focus();
+            else window.location.replace(`/totem/download/${json.message}`);
           })
         .catch((err) => alert(err));
       }
