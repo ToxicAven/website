@@ -5,9 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var app = express();
 
-
 var indexRouter = require('./routes/index');
-var pokemonRouter = require('./routes/pokemon');
 var yesRouter = require('./routes/yes')
 var clientsRouter = require('./routes/clients')
 var apiRouter = require('./routes/api')
@@ -33,7 +31,6 @@ app.use('/test', testRouter);
 //app.use('/catgirl', catgirlRouter);
 app.use('/api/uwu', uwuRouter);
 app.use('/yes', yesRouter);
-app.use('/pokemon', pokemonRouter);
 app.use('/kirbo', karbiRouter);
 app.use('/totem', totemRouter);
 app.use('/clients', clientsRouter);
