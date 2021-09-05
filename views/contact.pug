@@ -1,0 +1,52 @@
+doctype html
+head
+	title ToxicAven
+	link(rel='icon' href='/images/favicon.ico' type='image/x-icon')
+meta(name='viewport' content='width=device-width, initial-scale=1')
+meta(name='description' content='Hai, I\'m Jacob!')
+link(rel='stylesheet' href='/stylesheets/main.css')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js')
+script(src='https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.trunk.min.js')
+
+section#vanta
+
+	.super-navbar.scrolled
+			.super-navbar__content
+				.super-navbar__item-list
+					a.notion-link.super-navbar__item(href='/test') Home
+						a.notion-link.super-navbar__item(href='#') contact
+
+	h1#aven Contact
+	p You can contact me at these accounts:
+	ul
+		li
+			strong Discord: ToxicAven#3678
+		li
+			script.
+				ML="m\"rde:a/=g<cvihfst@nlo.> x";
+				MI=":6H>24?8106=DAE5AEI=;6<4CB3=@2EEAFE291GAEI=;6<4CB3=@2EEAFE29:76G";
+				OT="";
+				for(j=0;j<MI.length;j++){
+					OT+=ML.charAt(MI.charCodeAt(j)-48);
+				}document.write("Email: " + OT);
+			noscript Javascript needs to be enabled to view my Email.
+
+	ul
+		li
+			strong GitHub: 
+				a(href='https://github.com/ToxicAven') ToxicAven
+
+script.
+	VANTA.TRUNK({
+		el: "#vanta",
+		mouseControls: true,
+		touchControls: true,
+		gyroControls: false,
+		minHeight: 200.00,
+		minWidth: 200.00,
+		scale: 1.00,
+		scaleMobile: 1.00,
+		backgroundColor: 0x11081b,
+		spacing: 3.50,
+		chaos: 5
+	})
