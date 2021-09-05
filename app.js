@@ -17,6 +17,7 @@ var karbiRouter = require('./routes/kubi')
 var sourceRouter = require('./routes/source')
 var uwuRouter = require('./routes/apiEndpoints/uwu')
 var urlRouter = require('./routes/apiEndpoints/url')
+var testRouter = require('./routes/test_index')
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -28,6 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/test', testRouter);
 //app.use('/catgirl', catgirlRouter);
 app.use('/api/uwu', uwuRouter);
 app.use('/yes', yesRouter);

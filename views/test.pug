@@ -1,0 +1,30 @@
+doctype html
+head
+	title ToxicAven
+	link(rel='icon' href='/images/favicon.ico' type='image/x-icon')
+meta(name='viewport' content='width=device-width, initial-scale=1')
+meta(name='description' content='Hai, I\'m Jacob!')
+link(rel='stylesheet' href='/stylesheets/main.css')
+
+section#vanta
+	h1#aven Hai, i'm Aven!
+	h3 Computer Programming Student.
+	p work in progress...
+
+script(src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js')
+script(src='https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js')
+script.
+	VANTA.WAVES({
+		el: "#vanta",
+		mouseControls: false,
+		touchControls: false,
+		gyroControls: false,
+		minHeight: 200.00,
+		minWidth: 200.00,
+		scale: 1.00,
+		scaleMobile: 1.00,
+		color: 0x2a0f41,
+		shininess: 45.00,
+		waveHeight: 30.50,
+		waveSpeed: 0.55
+	})
