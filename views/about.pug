@@ -1,0 +1,38 @@
+doctype html
+head
+	title ToxicAven
+	link(rel='icon' href='/images/favicon.ico' type='image/x-icon')
+meta(name='viewport' content='width=device-width, initial-scale=1')
+meta(name='description' content='Hi, I\'m Jacob!')
+link(rel='stylesheet' href='/stylesheets/main.css')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js')
+script(src='https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js')
+
+section#vanta
+
+	.super-navbar.scrolled
+		.super-navbar__content
+			.super-navbar__item-list
+				a.notion-link.super-navbar__item(href='/test') Home
+				a.notion-link.super-navbar__item(href='#') About
+				a.notion-link.super-navbar__item(href='/contact') Contact
+
+	h1#aven About Me
+	ul
+		li Hello! My name is Jacob. I am a Sophomore currently studying Computer Programming!
+		li I enjoy experimenting with various programming languages, as well as Linux machines.
+
+script.
+	VANTA.NET({
+		el: "#vanta",
+		mouseControls: true,
+		touchControls: true,
+		gyroControls: false,
+		minHeight: 200.00,
+		minWidth: 200.00,
+		scale: 1.00,
+		scaleMobile: 1.00,
+		color: 0x2d48d7,
+		backgroundColor: 0x11081b,
+		spacing: 13.00
+	})
