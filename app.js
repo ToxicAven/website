@@ -5,8 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var app = express();
 var mainRouter = require('./routes/main')
-var indexRouter = require('./routes/index');
-var totemRouter = require('./routes/totem')
 var urlRouter = require('./routes/apiEndpoints/url')
 
 // view engine setup
@@ -19,9 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter); //OLD site, to be removed
 app.use('/', mainRouter);
-app.use('/totem', totemRouter);
 app.use('/', urlRouter);
 
 // catch 404 and forward to error handler
